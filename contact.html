@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-item"><i class="fa-regular fa-user"></i> Identification</a>
+        <a href="parcours.html" class="nav-item"><i class="fa-solid fa-briefcase"></i> Parcours</a>
+        <a href="projets.html" class="nav-item"><i class="fa-regular fa-folder"></i> Projets</a>
+        <a href="#" class="nav-item active"><i class="fa-regular fa-envelope"></i> Contact</a>
+    </nav>
+
+    <main class="container">
+        
+        <header class="page-header">
+            <h1>Me Contacter</h1>
+            <p>N'hésitez pas à me contacter pour toute opportunité ou question</p>
+        </header>
+
+        <div class="contact-layout">
+            
+            <div class="info-card blue-theme">
+                <h3><i class="fa-solid fa-download"></i> Curriculum Vitae</h3>
+                <p>Téléchargez mon CV au format PDF</p>
+                <a href="additional/MLYNARZAdrien_CV.pdf" target="_blank" class="btn btn-blue"><i class="fa-solid fa-download"></i> Télécharger le CV (PDF)</a>
+            </div>
+
+            <div class="info-card sky-theme">
+                <h3><i class="fa-brands fa-linkedin"></i> LinkedIn</h3>
+                <p>Connectons-nous sur LinkedIn</p>
+                <a href="https://www.linkedin.com/in/adrien-mlynarz-b560553a9/" target="_blank" class="btn btn-outline-sky"><i class="fa-brands fa-linkedin-in"></i> Visiter mon profil LinkedIn</a>
+            </div>
+
+            <div class="info-card coords-card">
+                <h3>Coordonnées directes</h3>
+                
+                <div class="coord-item">
+                    <i class="fa-solid fa-phone icon-phone"></i>
+                    <div>
+                        <span class="label">Téléphone</span>
+                        <span class="value">+33 7 67 34 06 91</span>
+                    </div>
+                </div>
+
+                <div class="coord-item">
+                    <i class="fa-regular fa-envelope icon-email"></i>
+                    <div>
+                        <span class="label">Email</span>
+                        <span class="value">adrien.mlynarz.1712@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card green-theme">
+                <h3>Disponibilité</h3>
+                <p>Actuellement disponible pour des stages ou alternance.</p>
+            </div>
+
+        </div>
+
+        <section class="form-card">
+                <h2><i class="fa-regular fa-envelope"></i> Formulaire de contact</h2>
+                <p class="form-subtitle">Envoyez-moi un message directement</p>
+
+                <form action="mailto:adrien.mlynarz.1712@gmail.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" placeholder="Votre nom" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="votre.email@exemple.fr" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" placeholder="Objet du message" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Votre message..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fa-regular fa-paper-plane"></i> Envoyer le message
+                    </button>
+                </form>
+            </section>
+
+
+        <footer class="contact-footer">
+            <p>Merci de votre intérêt pour mon profil. J'ai hâte d'échanger avec vous !</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

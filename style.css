@@ -1,0 +1,1038 @@
+/* Variables de couleur et réinitialisation */
+:root {
+    --bg-color: #f4f7fb;
+    --card-bg: #ffffff;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --primary-gradient: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+    --border-radius: 16px;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    padding-bottom: 50px;
+}
+
+/* Barre de Navigation */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid #e2e8f0;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-muted);
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: #2575fc;
+    border-bottom-color: #2575fc;
+}
+
+/* Conteneur Principal */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Carte de Profil Principal */
+.profile-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+.banner {
+    height: 160px;
+    background: var(--primary-gradient);
+}
+
+.profile-content {
+    display: flex;
+    padding: 0 40px 30px 40px;
+    position: relative;
+    align-items: flex-end;
+}
+
+.avatar-container {
+    margin-top: -60px;
+    margin-right: 25px;
+}
+
+.avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 5px solid var(--card-bg);
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: #ccc;
+}
+
+.profile-text {
+    margin-bottom: 10px;
+}
+
+.profile-text h1 {
+    font-size: 1.8rem;
+    color: #1a202c;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin: 4px 0 12px 0;
+}
+
+/* Badges / Tags */
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: #f1f5f9;
+    color: #475569;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Grille d'objectifs (3 colonnes) */
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-header i {
+    font-size: 1.5rem;
+}
+
+.card-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.timeframe {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    display: block;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Couleurs spécifiques aux icônes des objectifs */
+.text-blue { color: #3b82f6; }
+.text-purple { color: #8b5cf6; }
+.text-pink { color: #ec4899; }
+
+/* Section À Propos */
+.about-section {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 35px 40px;
+    box-shadow: var(--shadow);
+}
+
+.about-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #1a202c;
+}
+
+.about-section p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* Adaptabilité Mobile (Responsiveness) */
+@media (max-width: 768px) {
+    .profile-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px 25px 20px;
+    }
+
+    .avatar-container {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .tags {
+        justify-content: center;
+    }
+    
+    .navbar {
+        font-size: 0.85rem;
+    }
+}
+
+
+/* Variables globales de design */
+:root {
+    --bg-color: #f4f7fb;
+    --card-bg: #ffffff;
+    --text-main: #1a202c;
+    --text-muted: #64748b;
+    --timeline-line-color: #cbd5e1;
+    
+    /* Thèmes couleur */
+    --blue-primary: #3b82f6;
+    --green-primary: #10b981;
+    --orange-primary: #d97706;
+    --orange-bg: #fffbeb;
+    --orange-border: #fef3c7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    padding-bottom: 60px;
+}
+
+/* Barre de Navigation */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid #e2e8f0;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-muted);
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: #2575fc;
+    border-bottom-color: #2575fc;
+}
+
+/* Conteneur Principal */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* En-tête de la page */
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-header h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* --- SYSTEME DE LA FRISE (TIMELINE) --- */
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* La ligne centrale */
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #dbeafe; /* Ligne bleu-violet très clair */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Structure d'une ligne de la frise */
+.timeline-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    position: relative;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+/* Gestion de l'alignement Gauche / Droite */
+.timeline-item.left .card {
+    grid-column: 1;
+    justify-self: end;
+}
+
+.timeline-item.right .card {
+    grid-column: 2;
+    justify-self: start;
+}
+
+/* Les puces (points) sur la ligne centrale */
+.timeline-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-shadow: 0 0 0 4px #fff, 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Thèmes couleur des puces dynamiques */
+.blue-theme .timeline-dot { background-color: var(--blue-primary); }
+.green-theme .timeline-dot { background-color: var(--green-primary); }
+
+/* Cartes d'affichage des événements */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 25px;
+    width: 100%;
+    max-width: 460px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f1f5f9;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 8px;
+}
+
+.card h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Attribution des couleurs d'icônes selon le thème */
+.blue-theme .card h2 i { color: var(--blue-primary); }
+.green-theme .card h2 i { color: var(--green-primary); }
+
+/* Badge de l'année */
+.badge-year {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.institution {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* --- SECTION CERTIFICATIONS --- */
+.certifications-section {
+    background-color: var(--orange-bg);
+    border: 1px solid var(--orange-border);
+    border-radius: 16px;
+    padding: 30px;
+    margin-top: 60px;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    color: var(--orange-primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.certif-card {
+    background-color: #fff3e0; /* Fond beige/jaune très clair */
+    border: 1px solid #ffe0b2;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.certif-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a202c;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.certif-card h3 i {
+    color: var(--orange-primary);
+    font-size: 0.95rem;
+}
+
+.certif-card .subtitle {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+.certif-card .year {
+    color: #94a3b8;
+    font-size: 0.8rem;
+}
+
+/* --- RESPONSIVE DESIGN (MOBILE) --- */
+@media (max-width: 768px) {
+    /* Sur mobile, on pousse la ligne tout à gauche */
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding-left: 50px;
+    }
+
+    .timeline-item.left .card, 
+    .timeline-item.right .card {
+        grid-column: 1;
+        justify-self: start;
+        max-width: 100%;
+    }
+
+    /* Recalage des puces sur la ligne de gauche */
+    .timeline-dot {
+        left: 20px;
+        top: 30px;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* Variables globales */
+:root {
+    --bg-color: #f4f7fb;
+    --card-bg: #ffffff;
+    --text-main: #1a202c;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --border-radius: 20px;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    padding-bottom: 60px;
+}
+
+/* Barre de Navigation */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-muted);
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: #2575fc;
+    border-bottom-color: #2575fc;
+}
+
+/* Conteneur Principal */
+.container {
+    max-width: 1140px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* En-tête de la page */
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-header h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.page-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* Grille des cartes */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+}
+
+/* Style de la carte projet */
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    display: flex;
+    flex-direction: column;
+}
+
+/* En-tête interne de la carte */
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.icon-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+/* Fonds légers pour les icônes */
+.text-blue { background-color: #eff6ff; color: #3b82f6; }
+.text-indigo { background-color: #e0e7ff; color: #4f46e5; }
+
+.project-header h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 2px;
+}
+
+/* Badge SAÉ */
+.sae-badge {
+    display: inline-block;
+    background-color: #f1f5f9;
+    border: 1px solid var(--border-color);
+    color: #475569;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Contenu textuel */
+.project-tagline {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.project-desc {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Permet d'aligner les boutons en bas si les textes ont des tailles différentes */
+}
+
+/* Section techno */
+.tech-section {
+    margin-bottom: 30px;
+}
+
+.tech-section h3 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: #f1f5f9;
+    color: #334155;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Bouton Voir le projet */
+.btn-project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+    padding: 11px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-project:hover {
+    background-color: #f8fafc;
+    border-color: #94a3b8;
+}
+
+/* Version mobile */
+@media (max-width: 640px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-card {
+        padding: 20px;
+    }
+}
+
+/* Variables */
+:root {
+    --bg-color: #f4f7fb;
+    --card-bg: #ffffff;
+    --text-main: #1a202c;
+    --text-muted: #64748b;
+    --input-bg: #f1f5f9;
+    --border-radius: 16px;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    padding-bottom: 60px;
+}
+
+/* Barre de Navigation */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid #e2e8f0;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-muted);
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: #2575fc;
+    border-bottom-color: #2575fc;
+}
+
+/* Conteneur Principal */
+.container {
+    max-width: 1140px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* En-tête */
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.page-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* Disposition Grille (2 colonnes asymétriques) */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.contact-info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Style de base des cartes d'informations */
+.info-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.info-card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Thématique Bleue (CV) */
+.blue-theme {
+    background-color: #eff6ff;
+    border-color: #dbeafe;
+}
+.blue-theme h3 { color: #1e40af; }
+.blue-theme p { color: #1e40af; opacity: 0.8; }
+
+/* Thématique Ciel (LinkedIn) */
+.sky-theme {
+    background-color: #f0f9ff;
+    border-color: #e0f2fe;
+}
+.sky-theme h3 { color: #0369a1; }
+.sky-theme p { color: #0369a1; opacity: 0.8; }
+
+/* Thématique Verte (Dispo) */
+.green-theme {
+    background-color: #f0fdf4;
+    border-color: #dcfce7;
+}
+.green-theme h3 { color: #15803d; }
+.green-theme p { color: #166534; margin-bottom: 0; }
+
+/* Boutons des cartes de gauche */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.btn-blue {
+    background-color: #1d4ed8;
+    color: #ffffff;
+}
+.btn-blue:hover { background-color: #1e40af; }
+
+.btn-outline-sky {
+    background-color: #ffffff;
+    color: #0369a1;
+    border: 1px solid #bae6fd;
+}
+.btn-outline-sky:hover {
+    background-color: #f8fafc;
+    border-color: #7dd3fc;
+}
+
+/* Coordonnées Directes */
+.coords-card h3 {
+    color: #0f172a;
+    margin-bottom: 20px;
+}
+
+.coord-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #f8fafc;
+    padding: 14px 20px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.coord-item:last-child { margin-bottom: 0; }
+
+.coord-item i {
+    font-size: 1.1rem;
+}
+.icon-phone { color: #10b981; }
+.icon-email { color: #3b82f6; }
+
+.coord-item .label {
+    display: block;
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.coord-item .value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+/* --- LE FORMULAIRE (COLONNE DROITE) --- */
+.form-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 35px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.form-card h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.form-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    background-color: var(--input-bg);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    background-color: #ffffff;
+    border-color: #cbd5e1;
+    box-shadow: 0 0 0 4px rgba(241, 245, 249, 0.8);
+}
+
+/* Bouton de soumission (Noir/Bleu nuit très foncé) */
+.btn-submit {
+    width: 100%;
+    background-color: #09090b;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #18181b;
+}
+
+/* Pied de page / Message final */
+.contact-footer {
+    grid-column: span 2;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    margin-top: 20px;
+}
+
+.contact-footer p {
+    color: #475569;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 850px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-footer {
+        grid-column: span 1;
+    }
+}
